@@ -4,10 +4,15 @@ let fakeBin = strArray => {
   for (let i = 0; i < strArray.length; i++) {
     let num = parseInt(strArray[i]);
 
-    (num < 5) ? digits += '0' : digits +='1';
+    if (num < 5) {
+      digits += '0';
+    } else {
+      digits += '1';
+    }
 
-    return digits;
   }
+
+  return digits;
 };
 
 let strArray = '45385593107843568';
